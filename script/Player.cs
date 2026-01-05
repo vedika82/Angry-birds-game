@@ -1,5 +1,7 @@
 
 using System.Collections.ObjectModel;
+using System.Collections;
+// using System.Collections.Generic;
 using UnityEngine; 
 public class Player : MonoBehaviour 
 { //private cause we dont want anyone to acccess outside the class 
@@ -11,6 +13,8 @@ private Vector2 currentPosition;
 private Vector2 direction;  
 public float launchSpeed;
 public float maxDragAmount;
+public float delaytime;
+
 
 // Start is called once before the first execution of Update after the MonoBehaviour is created
 void Start()
@@ -93,5 +97,22 @@ private void OnMouseDrag()
 
 
 }
+//to reset the position of the bird to its starting position after hitting the blocks 
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    // Debug.Log("we have collided");
+    // rb.position=startPosition;
+    // rb.isKinematic=true;
+    // rb.velocity=Vector2.zero;
+    StartCoroutine(DelayRestart());
+}
+//this ieumerator is called corotine to add delay in the restart of the bird
+IEnumerator DelayRestart()
+    {//inside the brackett can put any number but here used to input the number from the inspector 
+        yield return new WaitForSeconds(delaytime);
+        rb.position = startPosition;
+        rb.isKinematic = true;
+        rb.linearVelocity = Vector2.zero;
+    }
 
 }
