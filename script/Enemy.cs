@@ -3,7 +3,10 @@ using System.Collections;
 // using System.Collections.Generic;
 // using System.Threading.Tasks.Dataflow;
 // using System.Collections.ObjectModel;
-using System.Numerics;
+// using System.Numerics;
+using UnityEngine.SceneManagement;
+// using System.Diagnostics;
+
 
 public class Enemy : MonoBehaviour
 {
@@ -27,9 +30,16 @@ public class Enemy : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            Instantiate(impact , transform.position,Quaternion.identity);
+            Instantiate(impact, transform.position,Quaternion.identity);
             Destroy(gameObject);
+            Debug.Log("Enemy died");
             // gameObject.SetActive(false);
+            //to go to the next level when the enemy dies 
+            // SceneManager.LoadScene(1);
+            //the above have a problem
+            //will always load the scene with index 1
+            //therefore update version below
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         else if (collision.gameObject.CompareTag("Box"))
@@ -40,6 +50,8 @@ public class Enemy : MonoBehaviour
             {  
                 Instantiate(impact , transform.position,Quaternion.identity);
                 gameObject.SetActive(false);
+                 Debug.Log("Enemy died");
+                 SceneManager.LoadScene(1);
             }
         }
     }
