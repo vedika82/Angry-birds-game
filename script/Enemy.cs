@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            //added impact effect when enemy dies
             Instantiate(impact, transform.position,Quaternion.identity);
             Destroy(gameObject);
             Debug.Log("Enemy died");
@@ -51,7 +52,8 @@ public class Enemy : MonoBehaviour
                 Instantiate(impact , transform.position,Quaternion.identity);
                 gameObject.SetActive(false);
                  Debug.Log("Enemy died");
-                 SceneManager.LoadScene(1);
+                //  SceneManager.LoadScene(1);
+                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
