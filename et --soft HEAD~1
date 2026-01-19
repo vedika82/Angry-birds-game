@@ -1,0 +1,60 @@
+[33mcommit b51a6bb6371c85c0784f4e9f62f710fe6404958f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Mon Jan 19 23:48:41 2026 +0530
+
+    redirecting the game
+
+[33mcommit 98d096f7a56356ecc3be38bf9130c8eff8ac015b[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Tue Jan 6 23:50:14 2026 +0530
+
+    error solved now can go to the next level also added levelcontroller script
+
+[33mcommit 52ef8980155c74ab1a06f9a8d35de8e6c82a44e2[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Tue Jan 6 23:41:50 2026 +0530
+
+    we have added some sprites and impact when enemy dies and going to the next level
+
+[33mcommit 7c1d002d1c8482c76361caa4a4357c3f6bd4937a[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Mon Jan 5 22:18:37 2026 +0530
+
+    enemy script to destroy enemy and prefabs for impact effect
+
+[33mcommit ca168aeaab029af0080acbc406437df0f3c01d73[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Mon Jan 5 21:05:18 2026 +0530
+
+    birdi starts from the starting position and added a little delay
+
+[33mcommit 23d617d9e23272f9f7ab40bdbd83f7398666fa2e[m
+Merge: 5e1fae6 8b6e1a9
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Sun Jan 4 01:33:05 2026 +0530
+
+    Merge branch 'main' of github.com:vedika82/Angry-birds-game
+
+[33mcommit 5e1fae614b4057df2d82a28912913b5442421c97[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Sun Jan 4 01:25:20 2026 +0530
+
+    now dragging and hitting the boxes in game somthing wrong in physics will see
+
+[33mcommit f35986a493c5fd22991b5773ed41baf98f534ea8[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Fri Jan 2 19:25:05 2026 +0530
+
+    dragging, changing its colour on holding and launching basically setting problem changed to new and old both
+
+[33mcommit 8b6e1a9fa01ad5e348b7a8615617966d1d42f9ea[m
+Author: Vedika Anand <anandvedika420@gmail.com>
+Date:   Fri Jan 2 16:42:59 2026 +0530
+
+    Add project title to README
+
+[33mcommit 4dce09395a1837c014c00a1e1d7db7bc0abc78e7[m
+Author: vedika82 <anandvedika420@gmail.com>
+Date:   Fri Jan 2 16:40:48 2026 +0530
+
+    initial commit
