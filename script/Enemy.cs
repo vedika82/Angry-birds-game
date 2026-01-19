@@ -35,12 +35,15 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Enemy died");
             // gameObject.SetActive(false);
+
             //to go to the next level when the enemy dies 
             // SceneManager.LoadScene(1);
             //the above have a problem
             //will always load the scene with index 1
             //therefore update version below
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //this only works on one enemy only bc when one killed the scene reloads and other enemies are lost
+            // thats why we use level controller script
         }
 
         else if (collision.gameObject.CompareTag("Box"))
