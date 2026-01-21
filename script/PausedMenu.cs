@@ -4,11 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-
-public class Paused : MonoBehaviour
+public class PausedMenu : MonoBehaviour
 {
 
-    public GameObject pauseScene;
+    public GameObject pauseScreen;
+    private bool isPaused;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,30 +18,37 @@ public class Paused : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {//to use the pause and unpause on any mechanic we can use escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseUppause();
+            PauseUnpause();
         }
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+        //we during playing the player is stopped
+            Time.timeScale = 1f;
+
     }
 
     public void PauseUnpause()
     {//done this cause we need to know whether the screen is paused or not 
-        if(ispaused )
+        if(isPaused )
         {
-            ispaused=false;
+            isPaused=false;
             pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
         }
 
         else
         {
-            ispaused= true;
+            isPaused= true;
             pauseScreen.SetActive(true);
+            Time.timeScale = 0f;
+
+
         }
     }
 
