@@ -40,6 +40,8 @@ private void OnMouseDown()
 {
     Debug.Log("My script in OnMouseDown is running");
     sr.color = Color.red;
+            AudioManager.instance.Playfx(2);
+
 }
 
 
