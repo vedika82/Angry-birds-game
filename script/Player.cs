@@ -57,6 +57,7 @@ private void OnMouseUp()
 
     rb.isKinematic = false;
     rb.AddForce(direction * launchSpeed);//to add force in the direction we want to launch  
+            AudioManager.instance.Playfx(0);
 
 
     sr.color = Color.white;
@@ -70,6 +71,8 @@ private void OnMouseDrag()
     Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
     Vector2 desiredPosition = mousePosition; 
     //we are intializing desired position to mouse position //vector2 have x and y only
+            // AudioManager.instance.Playfx(2);
+
     
     //vector2.distance distance between two points
     float distance = Vector2.Distance(desiredPosition, startPosition);

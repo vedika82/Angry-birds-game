@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Enemy died");
             // gameObject.SetActive(false);
+            AudioManager.instance.Playfx(0);
 
             //to go to the next level when the enemy dies 
             // SceneManager.LoadScene(1);
@@ -44,6 +45,7 @@ public class Enemy : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //this only works on one enemy only bc when one killed the scene reloads and other enemies are lost
             // thats why we use level controller script
+
         }
 
         else if (collision.gameObject.CompareTag("Box"))
@@ -55,8 +57,11 @@ public class Enemy : MonoBehaviour
                 Instantiate(impact , transform.position,Quaternion.identity);
                 gameObject.SetActive(false);
                  Debug.Log("Enemy died");
+            AudioManager.instance.Playfx(5);
+
                 //  SceneManager.LoadScene(1);
                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
             }
         }
     }
