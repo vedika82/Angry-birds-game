@@ -29,13 +29,14 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
+            
         {
+            AudioManager.instance.Playfx(0);
             //added impact effect when enemy dies
             Instantiate(impact, transform.position,Quaternion.identity);
             Destroy(gameObject);
             Debug.Log("Enemy died");
             // gameObject.SetActive(false);
-            AudioManager.instance.Playfx(0);
 
             //to go to the next level when the enemy dies 
             // SceneManager.LoadScene(1);
@@ -50,6 +51,8 @@ public class Enemy : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("Box"))
         {
+            AudioManager.instance.Playfx(5);
+
             // Destroy(gameObject);
             ContactPoint2D contactPoint = collision.contacts[0];
             if (contactPoint.normal.y < -0.5f)//just taken normal as y cause we need to hurt the enemy vertically
@@ -57,7 +60,6 @@ public class Enemy : MonoBehaviour
                 Instantiate(impact , transform.position,Quaternion.identity);
                 gameObject.SetActive(false);
                  Debug.Log("Enemy died");
-            AudioManager.instance.Playfx(5);
 
                 //  SceneManager.LoadScene(1);
                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
