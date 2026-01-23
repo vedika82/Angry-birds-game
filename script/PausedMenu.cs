@@ -47,8 +47,6 @@ public class PausedMenu : MonoBehaviour
             isPaused= true;
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
-
-
         }
     }
 
