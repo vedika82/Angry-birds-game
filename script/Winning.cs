@@ -24,7 +24,7 @@ public class Winning : MonoBehaviour
     public void leavegame()
     {
         Application.Quit();
-        Debug.Log("we are leaving the game");
+        // Debug.Log("we are leaving the game");
         
     }
 
